@@ -1,0 +1,491 @@
+/*! HTML5 Boilerplate v7.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+button {
+    background-color: orange;
+    border-radius: 10px;
+    float: right;
+    height: 50px;
+    width: 8%;
+    font-size: 15px;
+    margin-right: 20px;
+    position: fixed;
+    bottom: 0;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+header > h1 {
+    margin-top: 200px;
+    color: white;
+    word-spacing: 5px;
+}
+
+header > h4 {
+    font-weight: bold;
+    color: white;
+}
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+hr {
+    background-color: purple;
+    position: center;
+    height: 5px;
+    width: 15%;
+    margin-left: 50%;
+    margin-right: auto;
+}
+
+h1 {
+    color: orange;
+    font-size: 40px;
+    margin: 2px;
+}
+
+img {
+    height: 215px;
+    width: 45%;
+    margin-bottom: 3%;
+    margin-left: 25%;
+    margin-top: 4%;
+}
+
+input[type = text] {
+    width: 45%;
+    height: 40px;
+    margin-bottom: 40px;
+    border: 1px solid grey;
+}
+
+.background {
+    background-color: orange;
+    background-image: url("beersImage.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.beerElem {
+    vertical-align: top;
+    display: inline-block;
+    height: 360px;
+    width: 15%;
+    float: left;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 2% 5% 3.5% 5%;
+    margin: 5% -0.5% 5% 2%;
+    background-color: white;
+}
+
+.close {
+    color: black;
+    float: right;
+    margin-right: 20px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: orange;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container {
+    text-align: center;
+    height: 950px;
+    margin-bottom: -100px;
+}
+
+.inner {
+    min-height: 500px;
+}
+
+.modal {
+    background-color: white;
+    border: 1px solid grey;
+    width: 45%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    z-index: 1;
+    padding-left: -20%;
+    margin-left: 25%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.modal p, li, h4 {
+    color: gray;
+}
+
+.modal img {
+    float: left;
+    height: 420px;
+    width: 150px;
+    margin-left: 10%;
+    margin-right: 15%;
+}
+
+.rootBeer,
+.rootBeer.favorite,
+.rootBeerSearch {
+    display: inline;
+    margin-left: 85px;
+    margin-top: 100px;
+    background-color: whitesmoke;
+}
+
+.suggestion {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    float: left;
+    border: solid 2px grey;
+    height: 270px;
+    width: 30%;
+    margin-left: 2%;
+}
+
+.suggestion img {
+    height: 180px;
+    width: 35%;
+    margin-right: 55%;
+    margin-left: 30%;
+}
+
+.suggestion p {
+    display: inline;
+    width: 15%;
+    color: grey;
+    font-weight: bold;
+}
+
+.textElem {
+    text-align: center;
+    font-size: 95%;
+    width: 95%;
+}
+
+.text {
+    text-align: right;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+.topNav {
+    overflow: hidden;
+    background-color: orange;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    height: 45px;
+    top: 0;
+}
+
+#favorite {
+    text-decoration: none;
+    color: white;
+}
+
+#home {
+    margin-right: 7px;
+    text-decoration: none;
+    color: white;
+}
+
+#root,
+#root2,
+#rootFavorite,
+#rootFavorite2 {
+    padding: 0 0 2% 10%;
+    display: table;
+    width: 1400px;
+}
+
+#star {
+    font-size: 25px;
+    float: right;
+    letter-spacing: -10px;
+}
+
+#top,
+#topFavorite {
+    padding-left: 1%;
+    background-color: whitesmoke;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    /* 1 */
+}
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 1900px){
+    hr {
+        width: 10%;
+        margin-left: 42%;
+        margin-right: auto;
+    }
+    #top,
+    #topFavorite {
+        padding-left: 5%;
+    }
+}
+
+/* MEDIUM */
+@media only screen and (max-width: 1100px) {
+    button {
+        width: 15%;
+    }
+    hr {
+        width: 10%;
+        margin-left: 45%;
+    }
+    input[type = text] {
+        width: 65%;
+    }
+    .beerElem {
+        width: 25%;
+    }
+    .container {
+        margin-left: 10%;
+    }
+    .modal {
+        width: 65%;
+    }
+    .modal img {
+        width: 120px;
+        padding-bottom: 5%;
+    }
+    .suggestion img {
+        height: 150px;
+        width: 65px;
+    }
+    #root, #rootFavorite, .topNav, .background {
+        width: 100%;
+    }
+    #top {
+        padding-left: 3%;
+    }
+}
+
+/* SMALL */
+@media only screen and (max-width: 900px) {
+    button {
+        width: 30%;
+    }
+    hr {
+        width: 10%;
+        margin-left: 47%;
+        margin-right: auto;
+    }
+    input[type = text] {
+        width: 50%;
+    }
+    .beerElem {
+        width: 220px;
+    }
+    .container {
+        margin-left: 10%;
+        position: relative;
+    }
+    .modal {
+        width: 70%;
+    }
+    .modal img {
+        height: 220px;
+        width: 80px;
+    }
+    .suggestion {
+        height: 187px;
+    }
+    .suggestion img {
+        height: 80px;
+        width: 45px;
+    }
+    #root, #rootFavorite, .topNav, .background {
+        width: 100%;
+    }
+}
+
+/*
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+
+}
+*/
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    /*
+    a,
+    a:visited {
+        text-decoration: underline;
+    }*/
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    /*
+       * Don't show links that are fragment identifiers,
+       * or use the `javascript:` pseudo protocol
+       */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    /*
+       * Printing Tables:
+       * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+       */
+    thead {
+        display: table-header-group;
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
